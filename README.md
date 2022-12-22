@@ -107,7 +107,7 @@ Si ejecutamos las sentencias, obtendremos la siguiente tabla:
 ![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img03.png)
 
 # n_resumen()
-Cada base de datos tiene una cantidad de filas. La cantidad máxima de datos de cada variable es la cantidad de filas de la base de datos. No siempre se tiene una base de datos completa. Muchas veces se tienen celdas vacías sin datos. La función n_resumen() agrega a la batalla naval el "n" de cada variable por separado, la cantidad de datos vacíos, y el "n" simultánea de todas las variables (esto quiere decir solo cuenta las filas sin celdas vacías para las columnas seleccionadas.
+Cada base de datos tiene una cantidad de filas y de columnas. La cantidad máxima de datos de cada variable es la cantidad de filas de la base de datos. No siempre se tiene una base de datos completa, y en general no todas las variables disponibles de la base de datos ingresarán juntas para obtener una tabla, gráfico o test estad´sitico. Las bases de datos pueden presentar celdas vacías, o sea, celdas sin datos. La función n_resumen() agrega a la batalla naval el "n" de cada variable por separado, la cantidad de datos vacíos, y el "n" simultánea de todas las variables (esto quiere decir solo cuenta las filas sin celdas vacías para las columnas seleccionadas. Tomo como celda va´cia a las celdas NA.
 
 ```r
 # Base de datos modificada
@@ -123,15 +123,13 @@ Si ejecutamos las sentencias, obtendremos la siguiente tabla:
 ![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img04.png)
 
 Podemos ver que la cantidad máxima de datos de cada variable es 32 (columna total_cell).
+En dos variables se agrego una celda vacía:
+- Variables mpg - Número de Variable 1 - Columna A (en la fila 1)
+- Variable dist - Número de Variable 3 - Columna C (en la fila 3).
 
-Las variables 1 tiene una celda vacía en la primera fila. La variable 3 tiene una celda vacía en la fila 3. El resto de las variables tienen 0 celdas vacías.
-(Columna n_na).
+Las variables 1 y 3 presentan una celda vacía cada una. El resto de las variables tienen 0 celdas vacías. (Columna n_na).
 
-Las variables 1 y 3 tienen un n de 31 datos. (Columna n_data).
+Las variables 1 y 3 tienen un n de 31 datos. El resto de las variables tienen 32 datos. (Columna n_data).
 
 Si solo queremos usar las filas que tienen los datos completos, el "n" será 30. (Columna n_all).
 
-
-Image:
-
-![](https://raw.githubusercontent.com/deliaspanigo/Rscience.base/main/readme_files/Ejemplo001.png)
