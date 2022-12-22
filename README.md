@@ -31,6 +31,7 @@ ls("package:Rscience.base")
 ```
 
 Funciones y ejemplos
+![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img02.png)
 
 # num2let()
 Es muy común utilizar como archivo base de datos a un archivo tipo Excel. En el podemos ver que a cada variable le corresponde una letra.
