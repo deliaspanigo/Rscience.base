@@ -33,12 +33,50 @@ ls("package:Rscience.base")
 Funciones y ejemplos
 ![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img02.png)
 
+Veremos un pequeño resumen de cada funcion y objeto de la librería. No lo haremos en orden alfabético (como está detallado en la salida de R), sino en el orden de utilidad para el usuario.
+
 # num2let()
-Es muy común utilizar como archivo base de datos a un archivo tipo Excel. En el podemos ver que a cada variable le corresponde una letra.
+Es muy común utilizar como archivo base de datos a un archivo tipo Excel. En él podemos ver que a cada variable le corresponde una letra.
 La primer columna es "A", la segunda columna es "B", y así sucesivamente. ¿La columna 14, a qué letra de columna corresponde?
+```r
+num2let(14)
+# N
+```
+Las columnas 1, 2, 25, 26, 30, 73, 81, ¿a qué letra de columna se corresponden?
+```r
+num2let(c(1, 2, 25, 26, 30, 73, 81))
+# "A"  "B"  "Y"  "Z"  "AD" "BU" "CC"
+```
 
+Podemos tanto asignar un vector con los números, como guardar las letras de columnas en un nuevo objeto.
+```r
+numero_columna <- c(1, 2, 25, 26, 30, 73, 81)
+letra_columna <- num2let(numero_columna)
+letra_columna
+# "A"  "B"  "Y"  "Z"  "AD" "BU" "CC"
+```
 
-Esta función permite ingresar un número, y devuelve una letra. E
+# let2num()
+Al ser detallada una letra, devuelve el número de posición que le corresponde. Es una función sumamente útil si el usuario utiliza archivos Excel.
+A la columna "A" le corresponde el número 1. A la columna "B" le corresponde el número 2, y así. La función let2num() solo permite ingresar letras mayúsculas.
+La columna W, ¿qué número de columna se corresponde?
+```r
+let2num("W")
+# 23
+```
+Las columnas "A", "B", "W", "Z", "AA", "AJ", "GT", ¿a qué número de columna corresponden?
+```r
+let2num(c("A", "B", "W", "Z", "AA", "AJ", "GT"))
+# 1   2  23  26  27  36 202
+```
+
+Podemos tanto asignar un vector con las letras, como guardar los números de columna nuevo objeto.
+```r
+letra_columna <- c("A", "B", "W", "Z", "AA", "AJ", "GT")
+numero_columna <- let2num(letra_columna)
+numero_columna
+# 1   2  23  26  27  36 202
+```
 
 
 Image:
