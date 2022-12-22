@@ -5,7 +5,7 @@
 
 # Instalacion de la libreria desde github
 library(devtools)
-install_github("deliaspanigo/Rscience.base")
+install_github("deliaspanigo/Rscience.base", force = TRUE)
 
 
 # Hacer cambios de testing
