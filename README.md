@@ -107,7 +107,7 @@ Si ejecutamos las sentencias, obtendremos la siguiente tabla:
 ![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img03.png)
 
 # n_resumen()
-Cada base de datos tiene una cantidad de filas. La cantidad máxima de datos de cada variable es la cantidad de filas de la base de datos. No siempre se tiene una base de datos completa. Muchas veces se tienen celdas vacías sin datos. La función n_resumen() agrega a la batalla naval el "n" de cada variable por separado, la cantidad de datos vacíos, y el "n" simultánea de todas las variables (esto quiere decir solo cuenta las filas sin celdas vacías para las columnas seleccionadas.
+Cada base de datos tiene una cantidad de filas y de columnas. La cantidad máxima de datos de cada variable es la cantidad de filas de la base de datos. No siempre se tiene una base de datos completa, y en general no todas las variables disponibles de la base de datos ingresarán juntas para obtener una tabla, gráfico o test estad´sitico. Las bases de datos pueden presentar celdas vacías, o sea, celdas sin datos. La función n_resumen() agrega a la batalla naval el "n" de cada variable por separado, la cantidad de datos vacíos, y el "n" simultánea de todas las variables (esto quiere decir solo cuenta las filas sin celdas vacías para las columnas seleccionadas. Tomo como celda va´cia a las celdas NA.
 
 ```r
 # Base de datos modificada
