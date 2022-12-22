@@ -106,6 +106,27 @@ tabla_BN
 Si ejecutamos las sentencias, obtendremos la siguiente tabla:
 ![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img03.png)
 
+# n_resumen()
+Cada base de datos tiene una cantidad de filas. La cantidad máxima de datos de cada variable es la cantidad de filas de la base de datos. No siempre se tiene una base de datos completa. Muchas veces se tienen celdas vacías sin datos. La función n_resumen() agrega a la batalla naval el "n" de cada variable por separado, la cantidad de datos vacíos, y el "n" simultánea de todas las variables (esto quiere decir solo cuenta las filas sin celdas vacías para las columnas seleccionadas.
+
+```r
+# Base de datos modificada
+base_mod <- mtcars
+base_mod[1,1] <- NA
+base_mod[3,3] <- NA
+
+# Tabla de n_Resumen()
+tabla_nR <- n_resumen(base = base_mod, col_number = 1:ncol(base_mod))
+tabla_nR
+```
+Si ejecutamos las sentencias, obtendremos la siguiente tabla:
+![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img04.png)
+
+Podemos ver que la cantidad máxima de datos de cada variable es 32.
+Las variables 1 tiene una celda vacía en la primera fila. La variable 3 tiene una celda vacía en la fila 3.
+Las variables 1 y 3 tienen un n de 31 datos.
+Si solo queremos usar las filas que tienen los datos completos, el "n" será 30.
+
 
 Image:
 
