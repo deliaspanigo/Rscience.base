@@ -94,10 +94,13 @@ round2(0.5, digits = 0)
 # naval_battle()
 Dentro de la base de datos cada columna toma una posición en particular. Al utilizar archivos tipo Excel, el usuario utliza la denominación de letra de columna dentro del entorno de Excel. Entonces, una variable está en la columna A, G, H, AB, JC, etc. Dentro del entorno de R la invocación de una variable puede realizarse a través de su número de columna dentro de la base de datos o del nombre de la columna. La función naval_battle() reune a todas las formas de denominar e invocar a una columna en una sola tabla.
 Veamos un ejemplo con una base de R llamada mtcars.
+Hemos pedido que de todas las columnas de la base de datos mtcars (que son 11 columnas), solo realizar la batalla naval con las columnas 1, 3, 5, 7 y 9.
+Son en total 5 variables.
 
 ```r
 # Tabla Batalla Naval
-tabla_BN <- naval_battle(base = mtcars, col_number = c(1,3,5,7,9))
+variables_seleccionadas <- c(1,3,5,7,9)
+tabla_BN <- naval_battle(base = mtcars, col_number = variables_seleccionadas)
 tabla_BN
 ```
 Si ejecutamos las sentencias, obtendremos la siguiente tabla:
