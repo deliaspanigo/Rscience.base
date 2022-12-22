@@ -78,6 +78,31 @@ numero_columna
 # 1   2  23  26  27  36 202
 ```
 
+# round2()
+Existen varias funciones para redondear valores numéricos con decimales en R. Podemos nombrar round(), floor(), ceiling() y trunc().
+Los usuarios suelen dar por senteado que el redondeo en llevado a cabo como ellos piensan. Esto quiere decir que con valores decimales entre 0 y 4 el redondeo es hacia abajo; y con valores decimales entre 5 y 9 redondeamos hacia arriba. Veamos que la suposición del usuario puede ser incorrecta, y que es importante que el usuario se informe sobre la función a través del HELP y dejar de dar por sentado la acción que realiza una función. Un valor de 0.5 al ser redondeado sin dígitos decimales pasaría a ser 1, sin embargo en R pasa a ser 0:
+```r
+round(0.5, digits = 0)
+# 0
+```
+Esto se debe a que el redondeo por defecto de R no redondea de la manera en que lo hemos hecho en la secundaria. Lo hace de otra forma. Para ver los detalles correspondientes lea en Help de la función round(). Para realizar redondeos como solemos realizarlo debemos utilizar la función round2().
+```r
+round2(0.5, digits = 0)
+# 1
+```
+
+# naval_battle()
+Dentro de la base de datos cada columna toma una posición en particular. Al utilizar archivos tipo Excel, el usuario utliza la denominación de letra de columna dentro del entorno de Excel. Entonces, una variable está en la columna A, G, H, AB, JC, etc. Dentro del entorno de R la invocación de una variable puede realizarse a través de su número de columna dentro de la base de datos o del nombre de la columna. La función naval_battle() reune a todas las formas de denominar e invocar a una columna en una sola tabla.
+Veamos un ejemplo con una base de R llamada mtcars.
+
+```r
+# Tabla Batalla Naval
+tabla_BN <- naval_battle(base = mtcars, col_number = c(1,3,5,7,9))
+tabla_BN
+```
+Si ejecutamos las sentencias, obtendremos la siguiente tabla:
+![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img03.png)
+
 
 Image:
 
