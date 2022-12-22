@@ -123,8 +123,12 @@ Si ejecutamos las sentencias, obtendremos la siguiente tabla:
 ![](https://github.com/deliaspanigo/Rscience.base/blob/main/readme_files/img04.png)
 
 Podemos ver que la cantidad máxima de datos de cada variable es 32 (columna total_cell).
-Las variables 1 tiene una celda vacía en la primera fila. La variable 3 tiene una celda vacía en la fila 3. (Columna n_na).
+
+Las variables 1 tiene una celda vacía en la primera fila. La variable 3 tiene una celda vacía en la fila 3. El resto de las variables tienen 0 celdas vacías.
+(Columna n_na).
+
 Las variables 1 y 3 tienen un n de 31 datos. (Columna n_data).
+
 Si solo queremos usar las filas que tienen los datos completos, el "n" será 30. (Columna n_all).
 
 
